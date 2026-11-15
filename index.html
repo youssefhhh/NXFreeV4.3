@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NX Tweaker — PUBG Mods & Optimization Dashboard</title>
+    <title>NX Free — PUBG Mods & Optimization Dashboard</title>
 
     <!-- Google Fonts: Inter & Outfit & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,40 +16,40 @@
 
     <style>
         /* ==========================================================================
-           NX TWEAKER — MODERN MINIMALIST & SLATE TITANIUM DESIGN SYSTEM
+           NX FREE — MODERN MINIMALIST & OBSIDIAN RED DESIGN SYSTEM
            Clean, Eye-Friendly, Spacious, and High-Performance
            ========================================================================== */
         :root {
-            /* Clean Dark Palette */
-            --bg-base: #090c14;
-            --bg-sidebar: #06090f;
-            --bg-topbar: rgba(11, 15, 25, 0.85);
-            --bg-card: #0f1523;
-            --bg-card-hover: #151d30;
+            /* Clean Dark Palette — Red & Obsidian Black Theme */
+            --bg-base: #08080a;
+            --bg-sidebar: #040406;
+            --bg-topbar: rgba(10, 10, 13, 0.90);
+            --bg-card: #0f0f14;
+            --bg-card-hover: #1a1216;
             --bg-pill: rgba(255, 255, 255, 0.04);
 
             /* Fine Subtle Borders */
-            --border-subtle: rgba(255, 255, 255, 0.06);
-            --border-medium: rgba(255, 255, 255, 0.1);
-            --border-hover: rgba(99, 102, 241, 0.4);
+            --border-subtle: rgba(255, 255, 255, 0.07);
+            --border-medium: rgba(255, 255, 255, 0.12);
+            --border-hover: rgba(239, 68, 68, 0.45);
 
-            /* Primary Brand Accent (Modern Electric Indigo) */
-            --primary: #4f46e5;
-            --primary-hover: #4338ca;
-            --primary-soft: rgba(79, 70, 229, 0.12);
-            --primary-border: rgba(99, 102, 241, 0.28);
+            /* Primary Brand Accent (Vibrant Crimson & Blood Red) */
+            --primary: #dc2626;
+            --primary-hover: #b91c1c;
+            --primary-soft: rgba(220, 38, 38, 0.14);
+            --primary-border: rgba(239, 68, 68, 0.35);
 
-            /* Refined Accents */
-            --accent-cyan: #06b6d4;
-            --accent-cyan-soft: rgba(6, 182, 212, 0.12);
-            --accent-emerald: #10b981;
-            --accent-emerald-soft: rgba(16, 185, 129, 0.12);
-            --accent-amber: #f59e0b;
-            --accent-amber-soft: rgba(245, 158, 11, 0.12);
-            --accent-purple: #8b5cf6;
-            --accent-purple-soft: rgba(139, 92, 246, 0.12);
+            /* Refined Red Accents — Scarlet, Ruby, Rose & Flame */
+            --accent-cyan: #ff3355;
+            --accent-cyan-soft: rgba(255, 51, 85, 0.14);
+            --accent-emerald: #ef4444;
+            --accent-emerald-soft: rgba(239, 68, 68, 0.14);
+            --accent-amber: #f43f5e;
+            --accent-amber-soft: rgba(244, 63, 94, 0.14);
+            --accent-purple: #be123c;
+            --accent-purple-soft: rgba(190, 18, 60, 0.14);
             --accent-rose: #ef4444;
-            --accent-rose-soft: rgba(239, 68, 68, 0.12);
+            --accent-rose-soft: rgba(239, 68, 68, 0.14);
 
             /* Typography */
             --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -110,14 +110,15 @@
             line-height: 1.5;
         }
 
-        /* Subtle Ambient Glow */
+        /* Subtle Red & Black Ambient Glow */
         body::before {
             content: '';
             position: fixed;
             inset: 0;
             background:
-                radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.07), transparent 40%),
-                radial-gradient(circle at 85% 85%, rgba(6, 182, 212, 0.05), transparent 40%);
+                radial-gradient(circle at 15% 15%, rgba(220, 38, 38, 0.12), transparent 45%),
+                radial-gradient(circle at 85% 85%, rgba(185, 28, 28, 0.08), transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(5, 5, 7, 0.75), transparent 100%);
             pointer-events: none;
             z-index: 0;
         }
@@ -158,10 +159,10 @@
 
         .welcome-card {
             width: min(92vw, 480px);
-            background: #0d121f;
+            background: #0d0c10;
             border-radius: var(--radius-xl);
-            border: 1px solid var(--border-medium);
-            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(220, 38, 38, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.08);
             padding: 40px 36px 32px;
             text-align: center;
             position: relative;
@@ -179,18 +180,18 @@
             height: 60px;
             border-radius: 16px;
             margin: 0 auto 16px;
-            background: linear-gradient(135deg, rgba(79, 70, 229, 0.2), rgba(6, 182, 212, 0.15));
-            border: 1px solid var(--primary-border);
+            background: linear-gradient(135deg, rgba(225, 29, 72, 0.25), rgba(185, 28, 28, 0.18));
+            border: 1px solid rgba(239, 68, 68, 0.4);
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 24px rgba(79, 70, 229, 0.2);
+            box-shadow: 0 8px 28px rgba(225, 29, 72, 0.35);
         }
 
         .welcome-brand-badge svg {
             width: 32px;
             height: 32px;
-            fill: #818cf8;
+            fill: #ff3355;
         }
 
         .welcome-tag {
@@ -202,7 +203,7 @@
             font-size: 0.72rem;
             font-weight: 600;
             letter-spacing: 0.5px;
-            color: #818cf8;
+            color: #ff4d6d;
             background: var(--primary-soft);
             border: 1px solid var(--primary-border);
             margin-bottom: 12px;
@@ -253,7 +254,7 @@
         .welcome-pill svg {
             width: 13px;
             height: 13px;
-            color: #818cf8;
+            color: #ef4444;
         }
 
         /* Main CTA Button */
@@ -261,9 +262,9 @@
             width: 100%;
             padding: 14px 24px;
             border-radius: var(--radius-md);
-            border: none;
+            border: 1px solid rgba(239, 68, 68, 0.4);
             cursor: pointer;
-            background: var(--primary);
+            background: linear-gradient(135deg, #e11d48 0%, #b91c1c 100%);
             color: #ffffff;
             font-family: var(--font-main);
             font-size: 0.95rem;
@@ -272,14 +273,14 @@
             align-items: center;
             justify-content: center;
             gap: 10px;
-            box-shadow: 0 4px 16px rgba(79, 70, 229, 0.35);
+            box-shadow: 0 4px 20px rgba(225, 29, 72, 0.45);
             transition: all 0.2s ease;
         }
 
         .btn-enter-dash:hover {
-            background: var(--primary-hover);
+            background: linear-gradient(135deg, #f43f5e 0%, #dc2626 100%);
             transform: translateY(-1px);
-            box-shadow: 0 6px 22px rgba(79, 70, 229, 0.45);
+            box-shadow: 0 6px 26px rgba(225, 29, 72, 0.6);
         }
 
         .btn-enter-dash:active {
@@ -396,7 +397,7 @@
         .dash-brand-icon svg {
             width: 18px;
             height: 18px;
-            fill: #818cf8;
+            fill: #ff3355;
         }
 
         .dash-brand-info {
@@ -476,8 +477,7 @@
         }
 
         .dash-nav-sub {
-            font-size: 0.68rem;
-            color: var(--text-dim);
+            display: none !important;
         }
 
         .dash-nav-btn:hover {
@@ -494,11 +494,13 @@
             background: var(--primary-soft);
             border-color: var(--primary-border);
             color: #ffffff;
+            box-shadow: 0 2px 14px rgba(220, 38, 38, 0.22);
         }
 
         .dash-nav-btn.active .dash-nav-icon {
             background: var(--primary);
             color: #ffffff;
+            box-shadow: 0 2px 10px rgba(220, 38, 38, 0.45);
         }
 
         .dash-nav-btn.active .dash-nav-title {
@@ -506,7 +508,7 @@
         }
 
         .dash-nav-btn.active .dash-nav-sub {
-            color: #c7d2fe;
+            color: #fca5a5;
         }
 
         /* Sidebar Footer */
@@ -601,7 +603,7 @@
         .dash-breadcrumb-icon {
             width: 16px;
             height: 16px;
-            color: #818cf8;
+            color: #ef4444;
         }
 
         .dash-breadcrumb-page {
@@ -757,7 +759,7 @@
         .section-title svg {
             width: 14px;
             height: 14px;
-            color: #818cf8;
+            color: #ef4444;
         }
 
         .section-tag {
@@ -806,7 +808,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #818cf8;
+            color: #ff3355;
             flex-shrink: 0;
             transition: all 0.18s ease;
         }
@@ -827,20 +829,15 @@
             font-weight: 600;
             color: #f8fafc;
             line-height: 1.25;
-            margin-bottom: 2px;
+            margin-bottom: 0;
         }
 
         .action-card-desc {
-            font-size: 0.72rem;
-            color: var(--text-muted);
-            line-height: 1.35;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            display: none !important;
         }
 
         .action-card-chip {
-            align-self: flex-start;
+            align-self: center;
             font-family: var(--font-mono);
             font-size: 0.6rem;
             font-weight: 600;
@@ -871,25 +868,26 @@
             transform: translateY(0);
         }
 
-        /* Accent Variants */
-        .action-card.card-cyan .action-card-icon { color: #38bdf8; }
-        .action-card.card-cyan:hover { border-color: rgba(56, 189, 248, 0.35); }
+        /* Accent Variants — Red & Black System */
+        .action-card.card-cyan .action-card-icon { color: #ff3355; }
+        .action-card.card-cyan .action-card-chip { color: #ff4d6d; background: rgba(255, 51, 85, 0.14); border-color: rgba(255, 51, 85, 0.3); }
+        .action-card.card-cyan:hover { border-color: rgba(255, 51, 85, 0.45); }
 
-        .action-card.card-emerald .action-card-icon { color: #34d399; }
-        .action-card.card-emerald .action-card-chip { color: #34d399; background: var(--accent-emerald-soft); border-color: rgba(16, 185, 129, 0.25); }
-        .action-card.card-emerald:hover { border-color: rgba(16, 185, 129, 0.35); }
+        .action-card.card-emerald .action-card-icon { color: #ef4444; }
+        .action-card.card-emerald .action-card-chip { color: #f87171; background: rgba(239, 68, 68, 0.14); border-color: rgba(239, 68, 68, 0.3); }
+        .action-card.card-emerald:hover { border-color: rgba(239, 68, 68, 0.45); }
 
-        .action-card.card-purple .action-card-icon { color: #a78bfa; }
-        .action-card.card-purple .action-card-chip { color: #a78bfa; background: var(--accent-purple-soft); border-color: rgba(139, 92, 246, 0.25); }
-        .action-card.card-purple:hover { border-color: rgba(139, 92, 246, 0.35); }
+        .action-card.card-purple .action-card-icon { color: #f43f5e; }
+        .action-card.card-purple .action-card-chip { color: #fb7185; background: rgba(244, 63, 94, 0.14); border-color: rgba(244, 63, 94, 0.3); }
+        .action-card.card-purple:hover { border-color: rgba(244, 63, 94, 0.45); }
 
-        .action-card.card-amber .action-card-icon { color: #fbbf24; }
-        .action-card.card-amber .action-card-chip { color: #fbbf24; background: var(--accent-amber-soft); border-color: rgba(245, 158, 11, 0.25); }
-        .action-card.card-amber:hover { border-color: rgba(245, 158, 11, 0.35); }
+        .action-card.card-amber .action-card-icon { color: #fb7185; }
+        .action-card.card-amber .action-card-chip { color: #fda4af; background: rgba(251, 113, 133, 0.14); border-color: rgba(251, 113, 133, 0.3); }
+        .action-card.card-amber:hover { border-color: rgba(251, 113, 133, 0.45); }
 
-        .action-card.card-ruby .action-card-icon { color: #f87171; }
-        .action-card.card-ruby .action-card-chip { color: #f87171; background: var(--accent-rose-soft); border-color: rgba(239, 68, 68, 0.25); }
-        .action-card.card-ruby:hover { border-color: rgba(239, 68, 68, 0.35); }
+        .action-card.card-ruby .action-card-icon { color: #dc2626; }
+        .action-card.card-ruby .action-card-chip { color: #f87171; background: rgba(220, 38, 38, 0.14); border-color: rgba(220, 38, 38, 0.3); }
+        .action-card.card-ruby:hover { border-color: rgba(220, 38, 38, 0.45); }
 
         /* ==========================================================================
            EMULATOR CONTROL BAR
@@ -944,8 +942,7 @@
         }
 
         .emu-btn-desc {
-            font-size: 0.7rem;
-            color: var(--text-muted);
+            display: none !important;
         }
 
         .emu-btn:hover {
@@ -954,24 +951,25 @@
             border-color: var(--border-medium);
         }
 
-        .emu-btn-connect .emu-btn-icon { color: #818cf8; }
-        .emu-btn-connect:hover { border-color: rgba(99, 102, 241, 0.4); }
+        .emu-btn-connect .emu-btn-icon { color: #ff3355; }
+        .emu-btn-connect:hover { border-color: rgba(239, 68, 68, 0.45); }
 
         .emu-btn-launch {
-            background: var(--accent-emerald-soft);
-            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(220, 38, 38, 0.12);
+            border-color: rgba(220, 38, 38, 0.35);
         }
         .emu-btn-launch .emu-btn-icon {
-            background: var(--accent-emerald);
+            background: #dc2626;
             color: #ffffff;
+            box-shadow: 0 0 12px rgba(220, 38, 38, 0.4);
         }
         .emu-btn-launch:hover {
-            border-color: rgba(16, 185, 129, 0.5);
-            background: rgba(16, 185, 129, 0.18);
+            border-color: rgba(239, 68, 68, 0.6);
+            background: rgba(220, 38, 38, 0.22);
         }
 
         .emu-btn-stop .emu-btn-icon { color: #f87171; }
-        .emu-btn-stop:hover { border-color: rgba(239, 68, 68, 0.3); }
+        .emu-btn-stop:hover { border-color: rgba(239, 68, 68, 0.45); }
 
         /* ==========================================================================
            RECOVERY STEP-BY-STEP PANEL
@@ -1005,7 +1003,7 @@
         .recovery-workflow-title svg {
             width: 18px;
             height: 18px;
-            color: #818cf8;
+            color: #ef4444;
         }
 
         /* ==========================================================================
@@ -1042,7 +1040,7 @@
             position: relative;
             z-index: 2;
             width: min(92vw, 420px);
-            background: #0f1523;
+            background: #0f0f14;
             border-radius: var(--radius-lg);
             border: 1px solid var(--border-medium);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
@@ -1094,7 +1092,7 @@
         .about-modal-logo svg {
             width: 24px;
             height: 24px;
-            fill: #818cf8;
+            fill: #ff3355;
         }
 
         .about-modal-title {
@@ -1107,7 +1105,7 @@
         .about-modal-ver {
             font-family: var(--font-mono);
             font-size: 0.7rem;
-            color: #818cf8;
+            color: #ff4d6d;
             margin-bottom: 12px;
         }
 
@@ -1163,10 +1161,10 @@
             transform: translateX(0);
         }
 
-        .notification-info { border-left: 3px solid #818cf8; }
-        .notification-success { border-left: 3px solid var(--accent-emerald); }
-        .notification-error { border-left: 3px solid var(--accent-rose); }
-        .notification-warning { border-left: 3px solid var(--accent-amber); }
+        .notification-info { border-left: 3px solid #ef4444; }
+        .notification-success { border-left: 3px solid #ef4444; }
+        .notification-error { border-left: 3px solid #dc2626; }
+        .notification-warning { border-left: 3px solid #f43f5e; }
 
         .notification-icon {
             display: flex;
@@ -1181,16 +1179,16 @@
             display: block;
         }
 
-        .notification-info .notification-icon { color: #818cf8; }
-        .notification-success .notification-icon { color: var(--accent-emerald); }
-        .notification-error .notification-icon { color: var(--accent-rose); }
-        .notification-warning .notification-icon { color: var(--accent-amber); }
+        .notification-info .notification-icon { color: #ef4444; }
+        .notification-success .notification-icon { color: #ef4444; }
+        .notification-error .notification-icon { color: #dc2626; }
+        .notification-warning .notification-icon { color: #f43f5e; }
 
         .notification-spinner {
             width: 14px;
             height: 14px;
-            border: 2px solid rgba(129, 140, 248, 0.25);
-            border-top-color: #818cf8;
+            border: 2px solid rgba(239, 68, 68, 0.25);
+            border-top-color: #ef4444;
             border-radius: 50%;
             animation: spin 0.7s linear infinite;
             flex-shrink: 0;
@@ -1241,14 +1239,14 @@
            ========================================================================== */
         /* Hero Banner */
         .dres-banner {
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.12) 0%, rgba(79, 70, 229, 0.08) 50%, rgba(6, 182, 212, 0.05) 100%);
-            border: 1px solid rgba(139, 92, 246, 0.28);
+            background: linear-gradient(135deg, rgba(225, 29, 72, 0.16) 0%, rgba(185, 28, 28, 0.10) 50%, rgba(10, 10, 13, 0.85) 100%);
+            border: 1px solid rgba(239, 68, 68, 0.35);
             border-radius: var(--radius-lg);
             padding: 20px 24px;
             margin-bottom: 20px;
             position: relative;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 25px rgba(220, 38, 38, 0.12);
         }
         .dres-banner::before {
             content: "";
@@ -1257,30 +1255,30 @@
             right: -40px;
             width: 160px;
             height: 160px;
-            background: radial-gradient(circle, rgba(139, 92, 246, 0.25) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(225, 29, 72, 0.28) 0%, transparent 70%);
             pointer-events: none;
         }
         .dres-banner-chip {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(139, 92, 246, 0.18);
-            border: 1px solid rgba(139, 92, 246, 0.4);
+            background: rgba(225, 29, 72, 0.18);
+            border: 1px solid rgba(239, 68, 68, 0.4);
             padding: 4px 12px;
             border-radius: 99px;
             font-family: var(--font-mono);
             font-size: 0.68rem;
             font-weight: 700;
             letter-spacing: 0.8px;
-            color: #d8b4fe;
+            color: #fca5a5;
             margin-bottom: 10px;
         }
         .pulse-dot {
             width: 7px;
             height: 7px;
             border-radius: 50%;
-            background: #a855f7;
-            box-shadow: 0 0 10px #a855f7;
+            background: #ef4444;
+            box-shadow: 0 0 12px #ef4444;
             animation: pulseGlow 1.8s ease-in-out infinite;
         }
         .dres-banner-title {
@@ -1322,7 +1320,7 @@
             transition: border-color 0.2s ease, background 0.2s ease;
         }
         .dres-dim-card:hover {
-            border-color: rgba(139, 92, 246, 0.35);
+            border-color: rgba(239, 68, 68, 0.4);
             background: var(--bg-card-hover);
         }
         .dres-dim-header {
@@ -1359,8 +1357,8 @@
             transition: all 0.15s ease;
         }
         .dres-number-input:focus {
-            border-color: var(--accent-cyan);
-            box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+            border-color: #ef4444;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
         }
         .dres-number-input::-webkit-outer-spin-button,
         .dres-number-input::-webkit-inner-spin-button {
@@ -1417,10 +1415,11 @@
             border-color: var(--border-medium);
         }
         .dres-chip.active {
-            background: rgba(56, 189, 248, 0.15);
-            border-color: #38bdf8;
-            color: #38bdf8;
+            background: rgba(225, 29, 72, 0.22);
+            border-color: #ef4444;
+            color: #ff6b81;
             font-weight: 800;
+            box-shadow: 0 0 10px rgba(225, 29, 72, 0.3);
         }
 
         /* Center Visualizer Card */
@@ -1456,14 +1455,14 @@
             font-weight: 800;
             padding: 3px 8px;
             border-radius: 6px;
-            background: rgba(139, 92, 246, 0.18);
-            border: 1px solid rgba(139, 92, 246, 0.4);
-            color: #c084fc;
+            background: rgba(225, 29, 72, 0.18);
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            color: #fca5a5;
         }
         .dres-ratio-badge.is-ipad {
-            background: rgba(16, 185, 129, 0.18);
-            border-color: rgba(16, 185, 129, 0.4);
-            color: #34d399;
+            background: rgba(220, 38, 38, 0.22);
+            border-color: rgba(239, 68, 68, 0.45);
+            color: #ff6b81;
         }
         .dres-ratio-value {
             font-family: var(--font-display);
@@ -1490,8 +1489,8 @@
         }
         .dres-monitor-bezel {
             width: 100%;
-            background: #1e293b;
-            border: 2px solid #334155;
+            background: #141318;
+            border: 2px solid rgba(239, 68, 68, 0.35);
             border-radius: 8px;
             padding: 4px;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
@@ -1500,7 +1499,7 @@
         .dres-monitor-screen {
             width: 100%;
             aspect-ratio: 4 / 3;
-            background: radial-gradient(circle at center, #1e1b4b 0%, #030712 100%);
+            background: radial-gradient(circle at center, #2e0812 0%, #060608 100%);
             border-radius: 4px;
             position: relative;
             display: flex;
@@ -1508,14 +1507,14 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            border: 1px solid rgba(139, 92, 246, 0.3);
+            border: 1px solid rgba(239, 68, 68, 0.4);
             transition: aspect-ratio 0.25s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .dres-screen-grid {
             position: absolute;
             inset: 0;
-            background-image: linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(239, 68, 68, 0.12) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(239, 68, 68, 0.12) 1px, transparent 1px);
             background-size: 12px 12px;
             pointer-events: none;
         }
@@ -1531,36 +1530,36 @@
             font-family: var(--font-mono);
             font-size: 0.76rem;
             font-weight: 800;
-            color: #38bdf8;
+            color: #ff4d6d;
             letter-spacing: 0.3px;
         }
         .dres-hud-hz {
             font-family: var(--font-mono);
             font-size: 0.65rem;
-            color: #c084fc;
+            color: #ef4444;
             font-weight: 700;
         }
         .dres-screen-crosshair {
             width: 18px;
             height: 18px;
             position: absolute;
-            border: 1px dashed rgba(56, 189, 248, 0.4);
+            border: 1px dashed rgba(239, 68, 68, 0.5);
             border-radius: 50%;
             pointer-events: none;
         }
         .dres-monitor-neck {
             width: 18px;
             height: 12px;
-            background: #1e293b;
-            border-left: 1px solid #334155;
-            border-right: 1px solid #334155;
+            background: #141318;
+            border-left: 1px solid #291e24;
+            border-right: 1px solid #291e24;
         }
         .dres-monitor-base {
             width: 80px;
             height: 5px;
-            background: #334155;
+            background: #291e24;
             border-radius: 3px;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
         }
 
         /* Hz Selector Card */
@@ -1586,7 +1585,7 @@
         .dres-hz-title-group svg {
             width: 18px;
             height: 18px;
-            color: #38bdf8;
+            color: #ef4444;
         }
         .dres-hz-title-group h4 {
             font-family: var(--font-display);
@@ -1621,11 +1620,11 @@
             border-color: var(--border-medium);
         }
         .dres-hz-pill.active {
-            background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
-            border-color: #38bdf8;
+            background: linear-gradient(135deg, #e11d48 0%, #991b1b 100%);
+            border-color: #ef4444;
             color: #fff;
             font-weight: 800;
-            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.35);
+            box-shadow: 0 4px 16px rgba(225, 29, 72, 0.45);
         }
 
         /* Full Screen Stretched GPU Card */
@@ -1678,9 +1677,9 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(6, 182, 212, 0.12);
-            border: 1px solid rgba(6, 182, 212, 0.35);
-            color: #38bdf8;
+            background: rgba(225, 29, 72, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.35);
+            color: #ff6b81;
             font-weight: 700;
             font-size: 0.8rem;
             padding: 9px 16px;
@@ -1689,10 +1688,10 @@
             transition: all 0.2s ease;
         }
         .btn-gpu-stretch-open:hover {
-            background: rgba(6, 182, 212, 0.25);
-            border-color: #38bdf8;
+            background: rgba(225, 29, 72, 0.28);
+            border-color: #ef4444;
             color: #fff;
-            box-shadow: 0 0 14px rgba(6, 182, 212, 0.3);
+            box-shadow: 0 0 16px rgba(225, 29, 72, 0.45);
         }
 
         /* Telemetry Status Bar */
@@ -1727,8 +1726,8 @@
             font-weight: 800;
             color: #fff;
         }
-        #dres-status-preview { color: #38bdf8; }
-        #dres-status-ratio { color: #c084fc; }
+        #dres-status-preview { color: #ff4d6d; }
+        #dres-status-ratio { color: #ef4444; }
 
         /* Action Buttons Bar */
         .dres-actions-bar {
@@ -1771,17 +1770,18 @@
             justify-content: center;
             gap: 8px;
             border-radius: 10px;
-            border: 1px solid rgba(56, 189, 248, 0.4);
-            background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
+            border: 1px solid rgba(239, 68, 68, 0.5);
+            background: linear-gradient(135deg, #e11d48 0%, #991b1b 100%);
             color: #fff;
             cursor: pointer;
-            box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25);
+            box-shadow: 0 4px 18px rgba(225, 29, 72, 0.4);
             transition: all 0.2s ease;
             box-sizing: border-box;
         }
         .dres-btn-apply:hover {
+            background: linear-gradient(135deg, #f43f5e 0%, #b91c1c 100%);
             transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+            box-shadow: 0 6px 24px rgba(225, 29, 72, 0.6);
         }
 
         /* Strict SVG Sizing inside Action Buttons */
@@ -1924,8 +1924,8 @@
         }
         .res-save-btn:hover {
             background: rgba(255, 255, 255, 0.1);
-            border-color: var(--accent-cyan);
-            color: #38bdf8;
+            border-color: #ef4444;
+            color: #ff6b81;
         }
         .res-form {
             display: flex;
@@ -1970,8 +1970,8 @@
             box-sizing: border-box;
         }
         .res-input:focus {
-            border-color: var(--accent-cyan);
-            box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2);
+            border-color: #ef4444;
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
         }
         .res-input::-webkit-outer-spin-button,
         .res-input::-webkit-inner-spin-button {
@@ -1981,19 +1981,19 @@
         .res-apply-btn {
             width: 100%;
             padding: 12px;
-            background: linear-gradient(135deg, #0284c7 0%, #4f46e5 100%);
-            border: 1px solid rgba(56, 189, 248, 0.4);
+            background: linear-gradient(135deg, #e11d48 0%, #991b1b 100%);
+            border: 1px solid rgba(239, 68, 68, 0.5);
             border-radius: 10px;
             color: #fff;
             font-weight: 800;
             font-size: 0.88rem;
             cursor: pointer;
-            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+            box-shadow: 0 4px 16px rgba(225, 29, 72, 0.4);
             transition: all 0.2s ease;
         }
         .res-apply-btn:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+            background: linear-gradient(135deg, #f43f5e 0%, #b91c1c 100%);
+            box-shadow: 0 6px 22px rgba(225, 29, 72, 0.55);
         }
         .res-hint {
             font-size: 0.74rem;
@@ -2056,8 +2056,8 @@
             color: #34d399;
         }
         .res-tag.is-original {
-            background: rgba(139, 92, 246, 0.15);
-            color: #c084fc;
+            background: rgba(225, 29, 72, 0.18);
+            color: #fca5a5;
         }
         .btn-res-small {
             background: rgba(255, 255, 255, 0.06);
@@ -2071,9 +2071,9 @@
             transition: all 0.15s ease;
         }
         .btn-res-small:hover {
-            background: #38bdf8;
-            color: #031219;
-            border-color: #38bdf8;
+            background: #ef4444;
+            color: #fff;
+            border-color: #ef4444;
         }
         .btn-res-small.is-danger:hover {
             background: rgba(239, 68, 68, 0.2);
@@ -2120,8 +2120,8 @@
             font-family: var(--font-mono);
             font-size: 0.72rem;
             font-weight: 700;
-            color: #38bdf8;
-            background: rgba(6, 182, 212, 0.12);
+            color: #ff4d6d;
+            background: rgba(225, 29, 72, 0.14);
             padding: 3px 8px;
             border-radius: 6px;
         }
@@ -2163,10 +2163,10 @@
             transition: transform 0.2s ease;
         }
         .btn-module-action:hover {
-            background: linear-gradient(135deg, #0284c7 0%, #6366f1 100%);
-            border-color: #38bdf8;
+            background: linear-gradient(135deg, #e11d48 0%, #991b1b 100%);
+            border-color: #ef4444;
             color: #fff;
-            box-shadow: 0 4px 14px rgba(56, 189, 248, 0.25);
+            box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4);
         }
         .btn-module-action:hover svg {
             transform: translateX(3px);
@@ -2194,10 +2194,10 @@
             width: 18px !important;
             height: 18px !important;
         }
-        .panel-icon.icon-cyan { color: #38bdf8; background: rgba(56, 189, 248, 0.1); border-color: rgba(56, 189, 248, 0.25); }
-        .panel-icon.icon-violet { color: #c084fc; background: rgba(192, 132, 252, 0.1); border-color: rgba(192, 132, 252, 0.25); }
-        .panel-icon.icon-emerald { color: #34d399; background: rgba(52, 211, 153, 0.1); border-color: rgba(52, 211, 153, 0.25); }
-        .panel-icon.icon-indigo { color: #818cf8; background: rgba(129, 140, 248, 0.1); border-color: rgba(129, 140, 248, 0.25); }
+        .panel-icon.icon-cyan { color: #ff3355; background: rgba(255, 51, 85, 0.12); border-color: rgba(255, 51, 85, 0.3); }
+        .panel-icon.icon-violet { color: #f43f5e; background: rgba(244, 63, 94, 0.12); border-color: rgba(244, 63, 94, 0.3); }
+        .panel-icon.icon-emerald { color: #ef4444; background: rgba(239, 68, 68, 0.12); border-color: rgba(239, 68, 68, 0.3); }
+        .panel-icon.icon-indigo { color: #e11d48; background: rgba(225, 29, 72, 0.12); border-color: rgba(225, 29, 72, 0.3); }
         .panel-subtitle {
             font-size: 0.72rem;
             color: var(--text-muted);
@@ -2234,8 +2234,8 @@
         }
 
         .reg-search-box:focus-within {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+            border-color: #ef4444;
+            box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.25);
         }
 
         .reg-search-box svg {
@@ -2297,10 +2297,10 @@
 
         .reg-pills-nav-btn:hover {
             background: var(--bg-pill);
-            border-color: var(--primary-border);
+            border-color: rgba(239, 68, 68, 0.4);
             color: #fff;
             transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+            box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4);
         }
 
         .reg-pills-nav-btn:active {
@@ -2354,18 +2354,18 @@
         }
 
         .reg-pill.active {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.25) 0%, rgba(56, 189, 248, 0.2) 100%);
+            background: linear-gradient(135deg, rgba(225, 29, 72, 0.35) 0%, rgba(185, 28, 28, 0.25) 100%);
             color: #fff;
-            border-color: #6366f1;
+            border-color: #ef4444;
             font-weight: 700;
-            box-shadow: 0 2px 12px rgba(99, 102, 241, 0.35);
+            box-shadow: 0 2px 14px rgba(225, 29, 72, 0.4);
         }
 
         .reg-batch-btn {
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: linear-gradient(135deg, #4f46e5 0%, #06b6d4 100%);
+            background: linear-gradient(135deg, #e11d48 0%, #991b1b 100%);
             color: #fff;
             border: none;
             padding: 8px 16px;
@@ -2374,12 +2374,12 @@
             font-weight: 700;
             cursor: pointer;
             transition: all 0.2s;
-            box-shadow: 0 2px 10px rgba(79, 70, 229, 0.3);
+            box-shadow: 0 2px 12px rgba(225, 29, 72, 0.4);
         }
 
         .reg-batch-btn:hover {
             transform: translateY(-1px);
-            box-shadow: 0 4px 14px rgba(79, 70, 229, 0.45);
+            box-shadow: 0 4px 18px rgba(225, 29, 72, 0.55);
         }
 
         .reg-grid {
@@ -2421,6 +2421,9 @@
             letter-spacing: 0.4px;
             padding: 3px 8px;
             border-radius: 4px;
+            background: rgba(225, 29, 72, 0.14) !important;
+            color: #ff6b81 !important;
+            border: 1px solid rgba(239, 68, 68, 0.3) !important;
         }
 
         .reg-card-num {
@@ -2438,17 +2441,12 @@
             font-size: 0.92rem;
             font-weight: 700;
             color: #f8fafc;
-            margin-bottom: 6px;
+            margin-bottom: 0;
             line-height: 1.35;
         }
 
         .reg-card-desc {
-            font-size: 0.74rem;
-            color: var(--text-dim);
-            font-family: var(--font-mono);
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            display: none !important;
         }
 
         .reg-card-btn {
@@ -2469,10 +2467,10 @@
         }
 
         .reg-card-btn:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            color: #fff;
-            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            background: linear-gradient(135deg, #e11d48 0%, #b91c1c 100%);
+            border-color: #ef4444;
+            color: #ffffff;
+            box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4);
         }
 
         .reg-card-btn.loading {
@@ -2510,7 +2508,7 @@
                 <span>PRO V4.8</span>
             </div>
 
-            <h1>NX Tweaker</h1>
+            <h1>NX Free</h1>
             <p>High-performance utility for PUBG Mobile on GameLoop. Optimize latency, lock 120 FPS, and manage game assets cleanly.</p>
 
             <div class="welcome-pill-row">
@@ -2567,7 +2565,7 @@
                     </svg>
                 </div>
                 <div class="dash-brand-info">
-                    <span class="dash-brand-title">NX Tweaker</span>
+                    <span class="dash-brand-title">NX Free</span>
                     <span class="dash-brand-tag">GameLoop Edition</span>
                 </div>
             </div>
@@ -2581,7 +2579,6 @@
                     </div>
                     <div class="dash-nav-text">
                         <span class="dash-nav-title">Clean</span>
-                        <span class="dash-nav-sub">Caches & Memory</span>
                     </div>
                 </button>
 
@@ -2592,7 +2589,6 @@
                     </div>
                     <div class="dash-nav-text">
                         <span class="dash-nav-title">Recovery</span>
-                        <span class="dash-nav-sub">Paks & Sensitivity</span>
                     </div>
                 </button>
 
@@ -2603,7 +2599,6 @@
                     </div>
                     <div class="dash-nav-text">
                         <span class="dash-nav-title">Graphics</span>
-                        <span class="dash-nav-sub">120 FPS & Presets</span>
                     </div>
                 </button>
 
@@ -2614,7 +2609,6 @@
                     </div>
                     <div class="dash-nav-text">
                         <span class="dash-nav-title">Tweaks</span>
-                        <span class="dash-nav-sub">Debloat & Timer Res</span>
                     </div>
                 </button>
 
@@ -2625,7 +2619,6 @@
                     </div>
                     <div class="dash-nav-text">
                         <span class="dash-nav-title">CMD Center</span>
-                        <span class="dash-nav-sub">Kernel Tuning</span>
                     </div>
                 </button>
 
@@ -2639,7 +2632,6 @@
                     </div>
                     <div class="dash-nav-text">
                         <span class="dash-nav-title">Block Update</span>
-                        <span class="dash-nav-sub">GameLoop Hosts</span>
                     </div>
                 </button>
 
@@ -2654,7 +2646,6 @@
                     </div>
                     <div class="dash-nav-text">
                         <span class="dash-nav-title">Resolution</span>
-                        <span class="dash-nav-sub">Display & iPad View</span>
                     </div>
                 </button>
 
@@ -2667,7 +2658,6 @@
                     </div>
                     <div class="dash-nav-text">
                         <span class="dash-nav-title">GameLoop Res</span>
-                        <span class="dash-nav-sub">Emulator Canvas</span>
                     </div>
                 </button>
                 <!-- Registry Tab -->
@@ -2688,7 +2678,6 @@
                     </div>
                     <div class="dash-nav-text">
                         <span class="dash-nav-title">Registry</span>
-                        <span class="dash-nav-sub">Windows Reg Tweaks</span>
                     </div>
                 </button>
             </nav>
@@ -2764,7 +2753,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Full Clean</div>
-                                <div class="action-card-desc">Caches, temp buffers, DNS stack and memory trim</div>
                             </div>
                             <span class="action-card-chip">RECOMMENDED</span>
                         </button>
@@ -2780,7 +2768,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Clean ShaderCache</div>
-                                <div class="action-card-desc">Purges corrupt DirectX & Vulkan shader cache folders</div>
                             </div>
                             <span class="action-card-chip">GPU BOOST</span>
                         </button>
@@ -2798,7 +2785,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Clean Cache</div>
-                                <div class="action-card-desc">Removes junk system cache files safely</div>
                             </div>
                             <span class="action-card-chip">SAFE</span>
                         </button>
@@ -2816,7 +2802,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Clean GameLoop</div>
-                                <div class="action-card-desc">Cleans emulator crash dumps, logs, and temp stashes</div>
                             </div>
                             <span class="action-card-chip">EMULATOR</span>
                         </button>
@@ -2830,7 +2815,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Clear Temp</div>
-                                <div class="action-card-desc">Deletes Windows %TEMP% and prefetch junk</div>
                             </div>
                             <span class="action-card-chip">INSTANT</span>
                         </button>
@@ -2845,7 +2829,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Flush DNS & IP</div>
-                                <div class="action-card-desc">Resets resolver cache to resolve matchmaking lag</div>
                             </div>
                             <span class="action-card-chip">NETWORK</span>
                         </button>
@@ -2879,7 +2862,6 @@
                                 </div>
                                 <div class="action-card-body">
                                     <div class="action-card-title">Copy Paks</div>
-                                    <div class="action-card-desc">Step 1: Stash active game Paks into GameLoop temp</div>
                                 </div>
                                 <span class="action-card-chip">STEP 1</span>
                             </button>
@@ -2891,7 +2873,6 @@
                                 </div>
                                 <div class="action-card-body">
                                     <div class="action-card-title">Select Paks Folder</div>
-                                    <div class="action-card-desc">Step 2: Choose your desired Paks directory</div>
                                 </div>
                                 <span class="action-card-chip">STEP 2</span>
                             </button>
@@ -2903,7 +2884,6 @@
                                 </div>
                                 <div class="action-card-body">
                                     <div class="action-card-title">Apply Recovery</div>
-                                    <div class="action-card-desc">Step 3: Deploy and overwrite Paks back to game</div>
                                 </div>
                                 <span class="action-card-chip">STEP 3</span>
                             </button>
@@ -2928,7 +2908,6 @@
                                 </div>
                                 <div class="action-card-body">
                                     <div class="action-card-title">Copy Sensitivity</div>
-                                    <div class="action-card-desc">Extract active SaveGames profile from emulator</div>
                                 </div>
                                 <span class="action-card-chip">BACKUP</span>
                             </button>
@@ -2940,7 +2919,6 @@
                                 </div>
                                 <div class="action-card-body">
                                     <div class="action-card-title">Select Sens Folder</div>
-                                    <div class="action-card-desc">Browse local folder containing SaveGames files</div>
                                 </div>
                                 <span class="action-card-chip">BROWSE</span>
                             </button>
@@ -2952,7 +2930,6 @@
                                 </div>
                                 <div class="action-card-body">
                                     <div class="action-card-title">Apply Sensitivity</div>
-                                    <div class="action-card-desc">Inject sensitivity profiles directly into PUBG</div>
                                 </div>
                                 <span class="action-card-chip">INJECT</span>
                             </button>
@@ -2986,7 +2963,6 @@
                             </div>
                             <div class="emu-btn-body">
                                 <span class="emu-btn-title">Connect GameLoop</span>
-                                <span class="emu-btn-desc">Start & connect emulator ADB</span>
                             </div>
                         </button>
 
@@ -2997,7 +2973,6 @@
                             </div>
                             <div class="emu-btn-body">
                                 <span class="emu-btn-title">Launch Game</span>
-                                <span class="emu-btn-desc">Start PUBG Mobile</span>
                             </div>
                         </button>
 
@@ -3008,7 +2983,6 @@
                             </div>
                             <div class="emu-btn-body">
                                 <span class="emu-btn-title">Stop Emulator</span>
-                                <span class="emu-btn-desc">Terminate all processes</span>
                             </div>
                         </button>
                     </div>
@@ -3029,7 +3003,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Super Smooth 120FPS</div>
-                                <div class="action-card-desc">Maximum frame rate priority with lowest render scale</div>
                             </div>
                             <span class="action-card-chip">120 FPS</span>
                         </button>
@@ -3040,7 +3013,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Smooth 120FPS</div>
-                                <div class="action-card-desc">Standard competitive preset locked at 120Hz refresh</div>
                             </div>
                             <span class="action-card-chip">120 FPS</span>
                         </button>
@@ -3051,7 +3023,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Balanced 120FPS</div>
-                                <div class="action-card-desc">Equilibrium between sharp textures and 120 FPS</div>
                             </div>
                             <span class="action-card-chip">BALANCED</span>
                         </button>
@@ -3073,7 +3044,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">HDR 60FPS</div>
-                                <div class="action-card-desc">High dynamic range with stable 60 FPS cap</div>
                             </div>
                             <span class="action-card-chip">60 FPS</span>
                         </button>
@@ -3084,7 +3054,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">HDR 90FPS</div>
-                                <div class="action-card-desc">Cinematic clarity paired with smooth 90 FPS refresh</div>
                             </div>
                             <span class="action-card-chip">90 FPS</span>
                         </button>
@@ -3095,7 +3064,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">HDR 120FPS</div>
-                                <div class="action-card-desc">Maximum high dynamic range unlocked at 120 FPS</div>
                             </div>
                             <span class="action-card-chip">120 FPS</span>
                         </button>
@@ -3117,7 +3085,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Ultra HDR 60FPS</div>
-                                <div class="action-card-desc">Maximum render resolution with high-res textures</div>
                             </div>
                             <span class="action-card-chip">ULTRA</span>
                         </button>
@@ -3128,7 +3095,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Ultra HDR 90FPS</div>
-                                <div class="action-card-desc">Rich lighting dynamics running at 90Hz frame rate</div>
                             </div>
                             <span class="action-card-chip">ULTRA</span>
                         </button>
@@ -3139,7 +3105,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Ultra HDR 120FPS</div>
-                                <div class="action-card-desc">Peak PUBG Mobile visuals unlocked at full 120 FPS</div>
                             </div>
                             <span class="action-card-chip">EXTREME</span>
                         </button>
@@ -3171,7 +3136,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Normal Debloat</div>
-                                <div class="action-card-desc">Disables non-essential background Windows services safely</div>
                             </div>
                             <span class="action-card-chip">SAFE</span>
                         </button>
@@ -3183,7 +3147,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Full Debloat</div>
-                                <div class="action-card-desc">Deep OS telemetry stripping and background service cleanup</div>
                             </div>
                             <span class="action-card-chip">DEEP PURGE</span>
                         </button>
@@ -3195,7 +3158,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">NX Timer Resolution</div>
-                                <div class="action-card-desc">Locks OS kernel scheduler to 0.500ms for minimum input delay</div>
                             </div>
                             <span class="action-card-chip">0.5ms LOCKED</span>
                         </button>
@@ -3227,7 +3189,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Optimize PC</div>
-                                <div class="action-card-desc">CPU unparking, power plan optimization, and DWM priority</div>
                             </div>
                             <span class="action-card-chip">CPU & DWM</span>
                         </button>
@@ -3239,7 +3200,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Optimize GameLoop</div>
-                                <div class="action-card-desc">Tunes AndroidEmulator.exe memory allocation and threads</div>
                             </div>
                             <span class="action-card-chip">ENGINE</span>
                         </button>
@@ -3251,7 +3211,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Optimize RAM</div>
-                                <div class="action-card-desc">Trims process working sets and purges standby memory list</div>
                             </div>
                             <span class="action-card-chip">PURGE</span>
                         </button>
@@ -3263,7 +3222,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Optimize Ping</div>
-                                <div class="action-card-desc">TCPAckFrequency and NetworkThrottlingIndex gaming tweak</div>
                             </div>
                             <span class="action-card-chip">LOW PING</span>
                         </button>
@@ -3275,7 +3233,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Optimize FPS</div>
-                                <div class="action-card-desc">GPU queue depth, registry latency, and frame stabilizer</div>
                             </div>
                             <span class="action-card-chip">MAX FPS</span>
                         </button>
@@ -3312,7 +3269,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Block Update</div>
-                                <div class="action-card-desc">Add GameLoop update domains to Windows hosts file</div>
                             </div>
                             <span class="action-card-chip">BLOCK</span>
                         </button>
@@ -3327,7 +3283,6 @@
                             </div>
                             <div class="action-card-body">
                                 <div class="action-card-title">Unblock Update</div>
-                                <div class="action-card-desc">Remove blocked GameLoop domains and restore default hosts</div>
                             </div>
                             <span class="action-card-chip">RESTORE</span>
                         </button>
@@ -3717,14 +3672,13 @@
                         
     <div class="reg-card" data-category="Input & Latency" data-title="28 hex - lowest input latency" data-id="reg_01">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <span class="reg-card-badge">
                 Input & Latency
             </span>
             <span class="reg-card-num">#01</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">28 Hex - Lowest Input Latency</div>
-            <div class="reg-card-desc" title="Control\PriorityControl">Control\PriorityControl</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_01', '28 Hex - Lowest Input Latency', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3735,14 +3689,13 @@
     </div>
     <div class="reg-card" data-category="System & Memory" data-title="4 registry tweaks" data-id="reg_02">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <span class="reg-card-badge">
                 System & Memory
             </span>
             <span class="reg-card-num">#02</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">4 Registry Tweaks</div>
-            <div class="reg-card-desc" title="Power\PowerThrottling | Multimedia\SystemProfile">Power\PowerThrottling | Multimedia\SystemProfile</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_02', '4 Registry Tweaks', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3753,14 +3706,13 @@
     </div>
     <div class="reg-card" data-category="CPU & GPU" data-title="5 win32priorityseparation" data-id="reg_03">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="reg-card-badge">
                 CPU & GPU
             </span>
             <span class="reg-card-num">#03</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">5 Win32PrioritySeparation</div>
-            <div class="reg-card-desc" title="Control\PriorityControl">Control\PriorityControl</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_03', '5 Win32PrioritySeparation', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3771,14 +3723,13 @@
     </div>
     <div class="reg-card" data-category="Gaming & Display" data-title="boost fps in games" data-id="reg_04">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">
+            <span class="reg-card-badge">
                 Gaming & Display
             </span>
             <span class="reg-card-num">#04</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Boost FPS In Games</div>
-            <div class="reg-card-desc" title="Tasks\Games | System\GameConfigStore">Tasks\Games | System\GameConfigStore</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_04', 'Boost FPS In Games', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3789,14 +3740,13 @@
     </div>
     <div class="reg-card" data-category="System & Memory" data-title="boost pc responsiveness" data-id="reg_05">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <span class="reg-card-badge">
                 System & Memory
             </span>
             <span class="reg-card-num">#05</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Boost PC Responsiveness</div>
-            <div class="reg-card-desc" title="Control Panel\Desktop | CurrentControlSet\Control">Control Panel\Desktop | CurrentControlSet\Control</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_05', 'Boost PC Responsiveness', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3807,14 +3757,13 @@
     </div>
     <div class="reg-card" data-category="CPU & GPU" data-title="cpu & gpu optimizations" data-id="reg_06">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="reg-card-badge">
                 CPU & GPU
             </span>
             <span class="reg-card-num">#06</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">CPU & GPU Optimizations</div>
-            <div class="reg-card-desc" title="Multimedia\SystemProfile | Tasks\Games">Multimedia\SystemProfile | Tasks\Games</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_06', 'CPU & GPU Optimizations', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3825,14 +3774,13 @@
     </div>
     <div class="reg-card" data-category="CPU & GPU" data-title="cpu optimization" data-id="reg_07">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="reg-card-badge">
                 CPU & GPU
             </span>
             <span class="reg-card-num">#07</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">CPU Optimization</div>
-            <div class="reg-card-desc" title="Multimedia\SystemProfile">Multimedia\SystemProfile</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_07', 'CPU Optimization', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3843,14 +3791,13 @@
     </div>
     <div class="reg-card" data-category="CPU & GPU" data-title="cpu optimize" data-id="reg_08">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="reg-card-badge">
                 CPU & GPU
             </span>
             <span class="reg-card-num">#08</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">CPU Optimize</div>
-            <div class="reg-card-desc" title="Tasks\Games">Tasks\Games</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_08', 'CPU Optimize', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3861,14 +3808,13 @@
     </div>
     <div class="reg-card" data-category="CPU & GPU" data-title="cpu tweak" data-id="reg_09">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="reg-card-badge">
                 CPU & GPU
             </span>
             <span class="reg-card-num">#09</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">CPU Tweak</div>
-            <div class="reg-card-desc" title="Tasks\Games">Tasks\Games</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_09', 'CPU Tweak', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3879,14 +3825,13 @@
     </div>
     <div class="reg-card" data-category="Input & Latency" data-title="decrease delay" data-id="reg_10">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <span class="reg-card-badge">
                 Input & Latency
             </span>
             <span class="reg-card-num">#10</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Decrease Delay</div>
-            <div class="reg-card-desc" title="LanmanServer\Parameters">LanmanServer\Parameters</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_10', 'Decrease Delay', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3897,14 +3842,13 @@
     </div>
     <div class="reg-card" data-category="Gaming & Display" data-title="disable dvr 1" data-id="reg_11">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">
+            <span class="reg-card-badge">
                 Gaming & Display
             </span>
             <span class="reg-card-num">#11</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable DVR 1</div>
-            <div class="reg-card-desc" title="System\GameConfigStore">System\GameConfigStore</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_11', 'Disable DVR 1', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3915,14 +3859,13 @@
     </div>
     <div class="reg-card" data-category="Gaming & Display" data-title="disable dvr 2" data-id="reg_12">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">
+            <span class="reg-card-badge">
                 Gaming & Display
             </span>
             <span class="reg-card-num">#12</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable DVR 2</div>
-            <div class="reg-card-desc" title="ApplicationManagement\AllowGameDVR">ApplicationManagement\AllowGameDVR</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_12', 'Disable DVR 2', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3933,14 +3876,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable delivery optimization" data-id="reg_13">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#13</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Delivery Optimization</div>
-            <div class="reg-card-desc" title="DeliveryOptimization\Settings">DeliveryOptimization\Settings</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_13', 'Disable Delivery Optimization', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3951,14 +3893,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable diagnostics & telemetry services" data-id="reg_14">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#14</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Diagnostics & Telemetry Services</div>
-            <div class="reg-card-desc" title="Services\DiagTrack | Services\dmwappushservice">Services\DiagTrack | Services\dmwappushservice</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_14', 'Disable Diagnostics & Telemetry Services', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3969,14 +3910,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable download maps manager" data-id="reg_15">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#15</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Download Maps Manager</div>
-            <div class="reg-card-desc" title="Services\MapsBroker">Services\MapsBroker</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_15', 'Disable Download Maps Manager', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -3987,14 +3927,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable extra unnecessary services" data-id="reg_16">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#16</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Extra Unnecessary Services</div>
-            <div class="reg-card-desc" title="Services\WbioSrvc | Services\FontCache">Services\WbioSrvc | Services\FontCache</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_16', 'Disable Extra Unnecessary Services', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4005,14 +3944,13 @@
     </div>
     <div class="reg-card" data-category="Gaming & Display" data-title="disable fso and gamedvr" data-id="reg_17">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">
+            <span class="reg-card-badge">
                 Gaming & Display
             </span>
             <span class="reg-card-num">#17</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable FSO And GameDVR</div>
-            <div class="reg-card-desc" title="System\GameConfigStore | GameConfigStore\Children">System\GameConfigStore | GameConfigStore\Children</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_17', 'Disable FSO And GameDVR', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4023,14 +3961,13 @@
     </div>
     <div class="reg-card" data-category="Gaming & Display" data-title="disable game dvr1" data-id="reg_18">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">
+            <span class="reg-card-badge">
                 Gaming & Display
             </span>
             <span class="reg-card-num">#18</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Game DVR1</div>
-            <div class="reg-card-desc" title="System\GameConfigStore">System\GameConfigStore</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_18', 'Disable Game DVR1', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4041,14 +3978,13 @@
     </div>
     <div class="reg-card" data-category="Gaming & Display" data-title="disable game dvr2" data-id="reg_19">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">
+            <span class="reg-card-badge">
                 Gaming & Display
             </span>
             <span class="reg-card-num">#19</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Game DVR2</div>
-            <div class="reg-card-desc" title="System\GameConfigStore | GameConfigStore\Children">System\GameConfigStore | GameConfigStore\Children</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_19', 'Disable Game DVR2', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4059,14 +3995,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable largesystemcache" data-id="reg_20">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#20</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable LargeSystemCache</div>
-            <div class="reg-card-desc" title="Session Manager\Memory Management">Session Manager\Memory Management</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_20', 'Disable LargeSystemCache', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4077,14 +4012,13 @@
     </div>
     <div class="reg-card" data-category="Network & Ping" data-title="disable nagle s algorithm" data-id="reg_21">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 24, 0.3);">
+            <span class="reg-card-badge">
                 Network & Ping
             </span>
             <span class="reg-card-num">#21</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Nagle s Algorithm</div>
-            <div class="reg-card-desc" title="Parameters\Interfaces">Parameters\Interfaces</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_21', 'Disable Nagle s Algorithm', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4095,14 +4029,13 @@
     </div>
     <div class="reg-card" data-category="Network & Ping" data-title="disable network throttling index" data-id="reg_22">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 24, 0.3);">
+            <span class="reg-card-badge">
                 Network & Ping
             </span>
             <span class="reg-card-num">#22</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Network Throttling Index</div>
-            <div class="reg-card-desc" title="Multimedia\SystemProfile">Multimedia\SystemProfile</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_22', 'Disable Network Throttling Index', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4113,14 +4046,13 @@
     </div>
     <div class="reg-card" data-category="Network & Ping" data-title="disable network throttling" data-id="reg_23">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 24, 0.3);">
+            <span class="reg-card-badge">
                 Network & Ping
             </span>
             <span class="reg-card-num">#23</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Network Throttling</div>
-            <div class="reg-card-desc" title="Multimedia\SystemProfile">Multimedia\SystemProfile</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_23', 'Disable Network Throttling', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4131,14 +4063,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable onedrive sync" data-id="reg_24">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#24</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable OneDrive Sync</div>
-            <div class="reg-card-desc" title="Windows\OneDrive">Windows\OneDrive</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_24', 'Disable OneDrive Sync', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4149,14 +4080,13 @@
     </div>
     <div class="reg-card" data-category="Power & Hardware" data-title="disable power saving features for usb & system" data-id="reg_25">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(244, 114, 182, 0.15); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.3);">
+            <span class="reg-card-badge">
                 Power & Hardware
             </span>
             <span class="reg-card-num">#25</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Power Saving Features For USB & System</div>
-            <div class="reg-card-desc" title="DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e | DefaultPowerSchemeValues\8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c">DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e | DefaultPowerSchemeValues\8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_25', 'Disable Power Saving Features For USB & System', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4167,14 +4097,13 @@
     </div>
     <div class="reg-card" data-category="Network & Ping" data-title="disable power throttling" data-id="reg_26">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 24, 0.3);">
+            <span class="reg-card-badge">
                 Network & Ping
             </span>
             <span class="reg-card-num">#26</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Power Throttling</div>
-            <div class="reg-card-desc" title="54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1 | DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e">54533251-82be-4824-96c1-47b60b740d00\943c8cb6-6f93-4227-ad87-e9a3feec08d1 | DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_26', 'Disable Power Throttling', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4185,14 +4114,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable printing services" data-id="reg_27">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#27</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Printing Services</div>
-            <div class="reg-card-desc" title="Services\Spooler | Services\PrintNotify">Services\Spooler | Services\PrintNotify</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_27', 'Disable Printing Services', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4203,14 +4131,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable search indexing" data-id="reg_28">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#28</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Search Indexing</div>
-            <div class="reg-card-desc" title="Services\WSearch">Services\WSearch</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_28', 'Disable Search Indexing', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4221,14 +4148,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable sync host" data-id="reg_29">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#29</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Sync Host</div>
-            <div class="reg-card-desc" title="Services\OneSyncSvc | Services\OneSyncSvc_402ac">Services\OneSyncSvc | Services\OneSyncSvc_402ac</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_29', 'Disable Sync Host', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4239,14 +4165,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable sysmain (prefetch)" data-id="reg_30">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#30</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable SysMain (Prefetch)</div>
-            <div class="reg-card-desc" title="Services\SysMain">Services\SysMain</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_30', 'Disable SysMain (Prefetch)', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4257,14 +4182,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable telemtry & data collection" data-id="reg_31">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#31</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Telemtry & Data Collection</div>
-            <div class="reg-card-desc" title="Services\DiagTrack | Services\dmwappushservice">Services\DiagTrack | Services\dmwappushservice</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_31', 'Disable Telemtry & Data Collection', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4275,14 +4199,13 @@
     </div>
     <div class="reg-card" data-category="Power & Hardware" data-title="disable usb 3 link power savings" data-id="reg_32">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(244, 114, 182, 0.15); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.3);">
+            <span class="reg-card-badge">
                 Power & Hardware
             </span>
             <span class="reg-card-num">#32</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable USB 3 Link Power Savings</div>
-            <div class="reg-card-desc" title="DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e | DefaultPowerSchemeValues\8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c">DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e | DefaultPowerSchemeValues\8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_32', 'Disable USB 3 Link Power Savings', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4293,14 +4216,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable windows defender" data-id="reg_33">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#33</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable Windows Defender</div>
-            <div class="reg-card-desc" title="Windows\System | Microsoft\Windows Defender">Windows\System | Microsoft\Windows Defender</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_33', 'Disable Windows Defender', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4311,14 +4233,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="disable preemptions" data-id="reg_34">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#34</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Disable preemptions</div>
-            <div class="reg-card-desc" title="Services\nvlddmkm | GraphicsDrivers\Scheduler">Services\nvlddmkm | GraphicsDrivers\Scheduler</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_34', 'Disable preemptions', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4329,14 +4250,13 @@
     </div>
     <div class="reg-card" data-category="CPU & GPU" data-title="gpu tweaks" data-id="reg_35">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="reg-card-badge">
                 CPU & GPU
             </span>
             <span class="reg-card-num">#35</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">GPU Tweaks</div>
-            <div class="reg-card-desc" title="Control\GraphicsDrivers | GraphicsDrivers\Power">Control\GraphicsDrivers | GraphicsDrivers\Power</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_35', 'GPU Tweaks', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4347,14 +4267,13 @@
     </div>
     <div class="reg-card" data-category="Gaming & Display" data-title="game optimizations" data-id="reg_36">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">
+            <span class="reg-card-badge">
                 Gaming & Display
             </span>
             <span class="reg-card-num">#36</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Game Optimizations</div>
-            <div class="reg-card-desc" title="Tasks\Games">Tasks\Games</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_36', 'Game Optimizations', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4365,14 +4284,13 @@
     </div>
     <div class="reg-card" data-category="Input & Latency" data-title="input lag reduce from x1lly" data-id="reg_37">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <span class="reg-card-badge">
                 Input & Latency
             </span>
             <span class="reg-card-num">#37</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">INPUT LAG REDUCE FROM X1LLY</div>
-            <div class="reg-card-desc" title="Control\PriorityControl">Control\PriorityControl</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_37', 'INPUT LAG REDUCE FROM X1LLY', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4383,14 +4301,13 @@
     </div>
     <div class="reg-card" data-category="CPU & GPU" data-title="increase cpu performance" data-id="reg_38">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="reg-card-badge">
                 CPU & GPU
             </span>
             <span class="reg-card-num">#38</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Increase CPU Performance</div>
-            <div class="reg-card-desc" title="Tasks\Games">Tasks\Games</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_38', 'Increase CPU Performance', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4401,14 +4318,13 @@
     </div>
     <div class="reg-card" data-category="System & Memory" data-title="increase system resposiveness" data-id="reg_39">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <span class="reg-card-badge">
                 System & Memory
             </span>
             <span class="reg-card-num">#39</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Increase System Resposiveness</div>
-            <div class="reg-card-desc" title="Multimedia\SystemProfile">Multimedia\SystemProfile</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_39', 'Increase System Resposiveness', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4419,14 +4335,13 @@
     </div>
     <div class="reg-card" data-category="Input & Latency" data-title="keyboard optimization" data-id="reg_40">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <span class="reg-card-badge">
                 Input & Latency
             </span>
             <span class="reg-card-num">#40</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">KeyBoard Optimization</div>
-            <div class="reg-card-desc" title="Services\kbdclass | kbdclass\Parameters">Services\kbdclass | kbdclass\Parameters</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_40', 'KeyBoard Optimization', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4437,14 +4352,13 @@
     </div>
     <div class="reg-card" data-category="System & Memory" data-title="low-med optimization" data-id="reg_41">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <span class="reg-card-badge">
                 System & Memory
             </span>
             <span class="reg-card-num">#41</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Low-Med Optimization</div>
-            <div class="reg-card-desc" title="Multimedia\SystemProfile">Multimedia\SystemProfile</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_41', 'Low-Med Optimization', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4455,14 +4369,13 @@
     </div>
     <div class="reg-card" data-category="System & Memory" data-title="med-high optimization" data-id="reg_42">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <span class="reg-card-badge">
                 System & Memory
             </span>
             <span class="reg-card-num">#42</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Med-High Optimization</div>
-            <div class="reg-card-desc" title="Multimedia\SystemProfile">Multimedia\SystemProfile</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_42', 'Med-High Optimization', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4473,14 +4386,13 @@
     </div>
     <div class="reg-card" data-category="Input & Latency" data-title="mouse buffers" data-id="reg_43">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <span class="reg-card-badge">
                 Input & Latency
             </span>
             <span class="reg-card-num">#43</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Mouse Buffers</div>
-            <div class="reg-card-desc" title="Control Panel\Mouse | Control Panel\Mouse">Control Panel\Mouse | Control Panel\Mouse</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_43', 'Mouse Buffers', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4491,14 +4403,13 @@
     </div>
     <div class="reg-card" data-category="Input & Latency" data-title="mouse optimization" data-id="reg_44">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <span class="reg-card-badge">
                 Input & Latency
             </span>
             <span class="reg-card-num">#44</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Mouse Optimization</div>
-            <div class="reg-card-desc" title="Services\mouclass | mouclass\Enum">Services\mouclass | mouclass\Enum</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_44', 'Mouse Optimization', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4509,14 +4420,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="optional disable bluetooth services" data-id="reg_45">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#45</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">OPTIONAL Disable Bluetooth Services</div>
-            <div class="reg-card-desc" title="Services\BTAGService | Services\bthserv">Services\BTAGService | Services\bthserv</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_45', 'OPTIONAL Disable Bluetooth Services', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4527,14 +4437,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="optional disable download maps manager" data-id="reg_46">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#46</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">OPTIONAL Disable Download Maps Manager</div>
-            <div class="reg-card-desc" title="Services\MapsBroker">Services\MapsBroker</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_46', 'OPTIONAL Disable Download Maps Manager', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4545,14 +4454,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="optional disable printer services" data-id="reg_47">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#47</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">OPTIONAL Disable Printer Services</div>
-            <div class="reg-card-desc" title="Services\Spooler | Services\PrintNotify">Services\Spooler | Services\PrintNotify</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_47', 'OPTIONAL Disable Printer Services', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4563,14 +4471,13 @@
     </div>
     <div class="reg-card" data-category="Services & Debloat" data-title="optional disable xbox services" data-id="reg_48">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3);">
+            <span class="reg-card-badge">
                 Services & Debloat
             </span>
             <span class="reg-card-num">#48</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">OPTIONAL Disable Xbox Services</div>
-            <div class="reg-card-desc" title="Services\XblGameSave | Services\XboxNetApiSvc">Services\XblGameSave | Services\XboxNetApiSvc</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_48', 'OPTIONAL Disable Xbox Services', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4581,14 +4488,13 @@
     </div>
     <div class="reg-card" data-category="Power & Hardware" data-title="power optimization" data-id="reg_49">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(244, 114, 182, 0.15); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.3);">
+            <span class="reg-card-badge">
                 Power & Hardware
             </span>
             <span class="reg-card-num">#49</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Power Optimization</div>
-            <div class="reg-card-desc" title="DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e | DefaultPowerSchemeValues\8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c">DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e | DefaultPowerSchemeValues\8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_49', 'Power Optimization', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4599,14 +4505,13 @@
     </div>
     <div class="reg-card" data-category="Power & Hardware" data-title="power" data-id="reg_50">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(244, 114, 182, 0.15); color: #f472b6; border: 1px solid rgba(244, 114, 182, 0.3);">
+            <span class="reg-card-badge">
                 Power & Hardware
             </span>
             <span class="reg-card-num">#50</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Power</div>
-            <div class="reg-card-desc" title="Power\PowerThrottling | Session Manager\Power">Power\PowerThrottling | Session Manager\Power</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_50', 'Power', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4617,14 +4522,13 @@
     </div>
     <div class="reg-card" data-category="CPU & GPU" data-title="priority gpu" data-id="reg_51">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+            <span class="reg-card-badge">
                 CPU & GPU
             </span>
             <span class="reg-card-num">#51</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Priority GPU</div>
-            <div class="reg-card-desc" title="System\GameConfigStore">System\GameConfigStore</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_51', 'Priority GPU', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4635,14 +4539,13 @@
     </div>
     <div class="reg-card" data-category="System & Memory" data-title="ram management + overall system speed" data-id="reg_52">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <span class="reg-card-badge">
                 System & Memory
             </span>
             <span class="reg-card-num">#52</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">RAM Management + Overall System Speed</div>
-            <div class="reg-card-desc" title="Control Panel\Desktop">Control Panel\Desktop</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_52', 'RAM Management + Overall System Speed', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4653,14 +4556,13 @@
     </div>
     <div class="reg-card" data-category="System & Memory" data-title="registry optimizations" data-id="reg_53">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <span class="reg-card-badge">
                 System & Memory
             </span>
             <span class="reg-card-num">#53</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Registry Optimizations</div>
-            <div class="reg-card-desc" title="Multimedia\SystemProfile | Power\PowerThrottling">Multimedia\SystemProfile | Power\PowerThrottling</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_53', 'Registry Optimizations', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4671,14 +4573,13 @@
     </div>
     <div class="reg-card" data-category="System & Memory" data-title="registry tweaks to make windows faster" data-id="reg_54">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <span class="reg-card-badge">
                 System & Memory
             </span>
             <span class="reg-card-num">#54</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Registry Tweaks to Make Windows Faster</div>
-            <div class="reg-card-desc" title="ContextMenuHandlers\Copy To | ContextMenuHandlers\Move To">ContextMenuHandlers\Copy To | ContextMenuHandlers\Move To</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_54', 'Registry Tweaks to Make Windows Faster', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4689,14 +4590,13 @@
     </div>
     <div class="reg-card" data-category="Network & Ping" data-title="reinforce network priorities" data-id="reg_55">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 24, 0.3);">
+            <span class="reg-card-badge">
                 Network & Ping
             </span>
             <span class="reg-card-num">#55</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Reinforce Network Priorities</div>
-            <div class="reg-card-desc" title="Tcpip\ServiceProvider">Tcpip\ServiceProvider</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_55', 'Reinforce Network Priorities', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4707,14 +4607,13 @@
     </div>
     <div class="reg-card" data-category="System & Memory" data-title="windows ui tweaks" data-id="reg_56">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <span class="reg-card-badge">
                 System & Memory
             </span>
             <span class="reg-card-num">#56</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">Windows UI Tweaks</div>
-            <div class="reg-card-desc" title="CurrentVersion\AdvertisingInfo | Windows\System">CurrentVersion\AdvertisingInfo | Windows\System</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_56', 'Windows UI Tweaks', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4725,14 +4624,13 @@
     </div>
     <div class="reg-card" data-category="System & Memory" data-title="fix display" data-id="reg_57">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(99, 102, 241, 0.15); color: #818cf8; border: 1px solid rgba(99, 102, 241, 0.3);">
+            <span class="reg-card-badge">
                 System & Memory
             </span>
             <span class="reg-card-num">#57</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">fix display</div>
-            <div class="reg-card-desc" title="Tasks\Games | System\GameConfigStore">Tasks\Games | System\GameConfigStore</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_57', 'fix display', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4743,14 +4641,13 @@
     </div>
     <div class="reg-card" data-category="Input & Latency" data-title="fix input lag 2" data-id="reg_58">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <span class="reg-card-badge">
                 Input & Latency
             </span>
             <span class="reg-card-num">#58</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">fix input lag 2</div>
-            <div class="reg-card-desc" title="Control\PriorityControl">Control\PriorityControl</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_58', 'fix input lag 2', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4761,14 +4658,13 @@
     </div>
     <div class="reg-card" data-category="Input & Latency" data-title="fix input lag" data-id="reg_59">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <span class="reg-card-badge">
                 Input & Latency
             </span>
             <span class="reg-card-num">#59</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">fix input lag</div>
-            <div class="reg-card-desc" title="Services\acpipagr | Services\AcpiPmi">Services\acpipagr | Services\AcpiPmi</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_59', 'fix input lag', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4779,14 +4675,13 @@
     </div>
     <div class="reg-card" data-category="Gaming & Display" data-title="fullscreenfix" data-id="reg_60">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);">
+            <span class="reg-card-badge">
                 Gaming & Display
             </span>
             <span class="reg-card-num">#60</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">fullscreenfix</div>
-            <div class="reg-card-desc" title="System\GameConfigStore">System\GameConfigStore</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_60', 'fullscreenfix', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4797,14 +4692,13 @@
     </div>
     <div class="reg-card" data-category="Input & Latency" data-title="input" data-id="reg_61">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <span class="reg-card-badge">
                 Input & Latency
             </span>
             <span class="reg-card-num">#61</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">input</div>
-            <div class="reg-card-desc" title="mouclass\Parameters | kbdclass\Parameters">mouclass\Parameters | kbdclass\Parameters</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_61', 'input', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4815,14 +4709,13 @@
     </div>
     <div class="reg-card" data-category="Input & Latency" data-title="mouse-keyboard" data-id="reg_62">
         <div class="reg-card-top">
-            <span class="reg-card-badge" style="background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3);">
+            <span class="reg-card-badge">
                 Input & Latency
             </span>
             <span class="reg-card-num">#62</span>
         </div>
         <div class="reg-card-main">
             <div class="reg-card-title">mouse-keyboard</div>
-            <div class="reg-card-desc" title="Control Panel\Keyboard | mouclass\Parameters">Control Panel\Keyboard | mouclass\Parameters</div>
         </div>
         <button type="button" class="reg-card-btn" onclick="applyRegTweak('reg_62', 'mouse-keyboard', this)">
             <svg class="reg-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14">
@@ -4850,9 +4743,9 @@
                     <path d="M3 5.5L8.5 12 3 18.5h3.5L12 12l5.5 6.5H21L15.5 12 21 5.5h-3.5L12 12 6.5 5.5H3z" />
                 </svg>
             </div>
-            <h3 id="about-modal-title" class="about-modal-title">NX Tweaker</h3>
+            <h3 id="about-modal-title" class="about-modal-title">NX Free</h3>
             <div class="about-modal-ver">Edition v4.8 Free</div>
-            <p class="about-modal-text">NX Tweaker is built for competitive PUBG Mobile gamers seeking maximum FPS, zero input lag, and peak emulator smoothness. This version is free. For VIP tools and private support, reach us below.</p>
+            <p class="about-modal-text">NX Free is built for competitive PUBG Mobile gamers seeking maximum FPS, zero input lag, and peak emulator smoothness. This version is free. For VIP tools and private support, reach us below.</p>
             <div class="about-modal-links" role="group" aria-label="Social links">
                 <a href="https://discord.gg/nxgamingstore" class="social-link social-link-discord" aria-label="Discord" title="Discord" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-discord"></i>
@@ -5258,9 +5151,9 @@
         function downloadHostsBatch(isBlock) {
             let script = '';
             if (isBlock) {
-                script = `@echo off\r\n:: NX Tweaker - Block GameLoop Update\r\nnet session >nul 2>&1\r\nif %errorlevel% neq 0 (\r\n  echo Requesting administrator privileges...\r\n  powershell -Command "Start-Process '%~f0' -Verb RunAs"\r\n  exit /b\r\n)\r\nset "HP=%windir%\\System32\\drivers\\etc\\hosts"\r\nattrib -r "%HP%" >nul 2>&1\r\nfindstr /i "unifiedaccess.gameloop.com" "%HP%" >nul\r\nif %errorlevel% neq 0 (\r\n  >>"%HP%" echo.\r\n  >>"%HP%" echo # [GameLoop Block Update - NX Tweaker]\r\n  >>"%HP%" echo 127.0.0.1 unifiedaccess.gameloop.com\r\n  >>"%HP%" echo 127.0.0.1 down.gameloop.com\r\n  >>"%HP%" echo 127.0.0.1 update.gameloop.com\r\n  >>"%HP%" echo 127.0.0.1 dl.gameloop.com\r\n  >>"%HP%" echo 127.0.0.1 syzs.qq.com\r\n)\r\nipconfig /flushdns >nul 2>&1\r\necho GameLoop Update Blocked Successfully in hosts!\r\npause\r\n`;
+                script = `@echo off\r\n:: NX Free - Block GameLoop Update\r\nnet session >nul 2>&1\r\nif %errorlevel% neq 0 (\r\n  echo Requesting administrator privileges...\r\n  powershell -Command "Start-Process '%~f0' -Verb RunAs"\r\n  exit /b\r\n)\r\nset "HP=%windir%\\System32\\drivers\\etc\\hosts"\r\nattrib -r "%HP%" >nul 2>&1\r\nfindstr /i "unifiedaccess.gameloop.com" "%HP%" >nul\r\nif %errorlevel% neq 0 (\r\n  >>"%HP%" echo.\r\n  >>"%HP%" echo # [GameLoop Block Update - NX Free]\r\n  >>"%HP%" echo 127.0.0.1 unifiedaccess.gameloop.com\r\n  >>"%HP%" echo 127.0.0.1 down.gameloop.com\r\n  >>"%HP%" echo 127.0.0.1 update.gameloop.com\r\n  >>"%HP%" echo 127.0.0.1 dl.gameloop.com\r\n  >>"%HP%" echo 127.0.0.1 syzs.qq.com\r\n)\r\nipconfig /flushdns >nul 2>&1\r\necho GameLoop Update Blocked Successfully in hosts!\r\npause\r\n`;
             } else {
-                script = `@echo off\r\n:: NX Tweaker - Unblock GameLoop Update\r\nnet session >nul 2>&1\r\nif %errorlevel% neq 0 (\r\n  echo Requesting administrator privileges...\r\n  powershell -Command "Start-Process '%~f0' -Verb RunAs"\r\n  exit /b\r\n)\r\nset "HP=%windir%\\System32\\drivers\\etc\\hosts"\r\nattrib -r "%HP%" >nul 2>&1\r\npowershell -NoProfile -Command "$h = '$env:windir\\System32\\drivers\\etc\\hosts'; (Get-Content $h) | Where-Object { $_ -notmatch 'unifiedaccess\\.gameloop\\.com|down\\.gameloop\\.com|update\\.gameloop\\.com|dl\\.gameloop\\.com|syzs\\.qq\\.com|gameloop block update' } | Set-Content $h -Force"\r\nipconfig /flushdns >nul 2>&1\r\necho GameLoop Update Unblocked and hosts restored!\r\npause\r\n`;
+                script = `@echo off\r\n:: NX Free - Unblock GameLoop Update\r\nnet session >nul 2>&1\r\nif %errorlevel% neq 0 (\r\n  echo Requesting administrator privileges...\r\n  powershell -Command "Start-Process '%~f0' -Verb RunAs"\r\n  exit /b\r\n)\r\nset "HP=%windir%\\System32\\drivers\\etc\\hosts"\r\nattrib -r "%HP%" >nul 2>&1\r\npowershell -NoProfile -Command "$h = '$env:windir\\System32\\drivers\\etc\\hosts'; (Get-Content $h) | Where-Object { $_ -notmatch 'unifiedaccess\\.gameloop\\.com|down\\.gameloop\\.com|update\\.gameloop\\.com|dl\\.gameloop\\.com|syzs\\.qq\\.com|gameloop block update' } | Set-Content $h -Force"\r\nipconfig /flushdns >nul 2>&1\r\necho GameLoop Update Unblocked and hosts restored!\r\npause\r\n`;
             }
             const blob = new Blob([script], { type: 'application/bat' });
             const url = URL.createObjectURL(blob);
@@ -5376,7 +5269,7 @@
                     code: 'NX_READY',
                     command: 'READY',
                     version: '4.8',
-                    title: 'NX TWEAKER',
+                    title: 'NX FREE',
                     features: ['mods', 'controls', 'notifications', 'welcome', 'dashboardPages', 'clean', 'graphics', 'recovery', 'tweaks', 'cmdcenter', 'blockupdate']
                 }
             });
